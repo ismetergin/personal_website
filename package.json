@@ -2,7 +2,7 @@
   "name": "ismetergin-com",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@11.16.0",
+  "packageManager": "pnpm@10.15.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build",
