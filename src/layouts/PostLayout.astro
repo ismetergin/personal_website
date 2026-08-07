@@ -1,0 +1,23 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { frontmatter } = Astro.props;
+const date = new Intl.DateTimeFormat('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(frontmatter.date));
+---
+
+<BaseLayout title={`${frontmatter.title} — İsmet Ergin`} description={frontmatter.description} image={frontmatter.image} article>
+  <header class="article-nav shell">
+    <a href="/" aria-label="Ana sayfa">İsmet Ergin</a>
+    <a href="/">← Ana sayfa</a>
+  </header>
+  <main class="article-shell">
+    <header class="article-header">
+      <p class="eyebrow">Blog · <time datetime={frontmatter.date}>{date}</time></p>
+      <h1>{frontmatter.title}</h1>
+      <p>{frontmatter.description}</p>
+    </header>
+    <img class="article-hero" src={frontmatter.image} alt="" />
+    <article class="prose"><slot /></article>
+  </main>
+  <footer class="shell"><span>© {new Date().getFullYear()} İsmet Ergin</span><a href="/">Ana sayfa →</a></footer>
+</BaseLayout>

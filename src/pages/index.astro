@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <main>
+    <section class="hero shell">
+      <div class="portrait-wrap">
+        <img class="portrait" src="/images/ismet-ergin.jpg" alt="İsmet Ergin" width="560" height="560" />
+      </div>
+      <div class="intro">
+        <p class="eyebrow">Merhaba, ben</p>
+        <h1>İsmet Ergin</h1>
+        <p class="lead">Tech Entrepreneur, Dad, Husband</p>
+        <p class="tags">#IoT&nbsp; #Hardware&nbsp; #Cloud&nbsp; #Growth&nbsp; #Domaining</p>
+        <nav class="socials" aria-label="Sosyal medya bağlantıları">
+          <a href="https://twitter.com/ismet_ergin" target="_blank" rel="noreferrer">X / Twitter <span>↗</span></a>
+          <a href="https://www.linkedin.com/in/ismetergin" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+          <a href="https://medium.com/@ismetergin" target="_blank" rel="noreferrer">Medium <span>↗</span></a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="ventures shell" aria-labelledby="ventures-title">
+      <div class="section-heading">
+        <p class="eyebrow">Ürettiklerim</p>
+        <h2 id="ventures-title">Startups</h2>
+      </div>
+      <div class="venture-grid">
+        <a class="venture-card" href="https://sixfab.com" target="_blank" rel="noreferrer">
+          <img src="/images/sixfab-logo.png" alt="Sixfab" />
+          <span>sixfab.com ↗</span>
+        </a>
+        <a class="venture-card" href="https://www.robotistan.com" target="_blank" rel="noreferrer">
+          <img src="/images/robotistan-logo.png" alt="Robotistan" />
+          <span>robotistan.com ↗</span>
+        </a>
+      </div>
+      <p class="failures"><strong>Failed, learned, moved on:</strong> Makerhane (STEM Education), Bomec Garage (Hardware), Pintek (B2B, Mobile App)</p>
+    </section>
+
+    <section class="blog shell" aria-labelledby="blog-title">
+      <div class="section-heading">
+        <p class="eyebrow">Notlar</p>
+        <h2 id="blog-title">Blog</h2>
+      </div>
+      <a class="post-card" href="/stripe-atlas-ile-amerikada-sirket-kurmak/">
+        <div class="post-image"><img src="/images/stripe-atlas.png" alt="" /></div>
+        <div class="post-copy">
+          <time datetime="2019-08-10">10 Ağustos 2019</time>
+          <h3>Stripe Atlas ile Amerika’da Şirket Kurmak</h3>
+          <p>Delaware merkezli şirket kurulumunda Stripe Atlas, banka hesabı, hisse ve vergi süreçlerinden öğrendiklerim.</p>
+          <span class="read-more">Yazıyı oku <b>→</b></span>
+        </div>
+      </a>
+    </section>
+  </main>
+  <footer class="shell"><span>© {new Date().getFullYear()} İsmet Ergin</span><a href="#top">Başa dön ↑</a></footer>
+</BaseLayout>
