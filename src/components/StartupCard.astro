@@ -1,0 +1,62 @@
+---
+interface Props {
+  href: string;
+  logoSrc: string;
+  logoAlt: string;
+  description: string;
+}
+
+const { href, logoSrc, logoAlt, description } = Astro.props;
+---
+
+<a href={href} class="card" target="_blank" rel="noreferrer">
+  <img src={logoSrc} alt={logoAlt} class="logo" />
+  <p class="desc">{description}</p>
+  <span class="visit">Visit website ↗</span>
+</a>
+
+<style>
+  .card {
+    flex: 1;
+    min-width: 280px;
+    min-height: 210px;
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 13px;
+    transition: transform 180ms ease, border-color 180ms ease;
+  }
+
+  .card:hover {
+    color: var(--text);
+    transform: translateY(-3px);
+    border-color: var(--line-hover);
+  }
+
+  .logo {
+    height: 58px;
+    width: min(260px, 85%);
+    object-fit: contain;
+    object-position: left center;
+    filter: grayscale(1) brightness(2.4);
+  }
+
+  .desc {
+    margin: 0;
+    font-size: 15px;
+    color: var(--text-muted);
+  }
+
+  .visit {
+    margin-top: 14px;
+    color: var(--text-dim);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+</style>
